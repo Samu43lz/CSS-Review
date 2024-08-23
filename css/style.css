@@ -1,0 +1,43 @@
+/* Regla CSS conta de 2 partes */
+/* 1) El selector 2) Bloque de declaraciones atributo: valor;
+ */
+
+/* forma para llamar otra hoja css dentro de otra (Mala practica)
+porque son bloqueantes a la hora de que el navegador lee la instrucción*/
+@import url(otra-hoja.css);
+
+h1 {
+  color: blueviolet;
+  background-color: black;
+}
+
+/* tenemos que evitar en la medida de lo posible de utilizar ID's para
+hacer diseños */
+#p1 {
+  color: brown;
+}
+
+/* MEJOR UTILICEMOS CLASES ! (Nos permite reutilizar nuestro código */
+/* ademas nos ayudara a adaptarnos mejor cuando pasemos a un framework como Bootstrap o Tailwind */
+
+/* ******* TEXT - TEXT(COLOR)****** */
+.text-20 {
+  font-size: 20px;
+}
+
+.text-30 {
+  font-size: 30px;
+}
+
+.text-white {
+  color: white;
+}
+
+/* ****** BG ****** */
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.bg-black {
+  background-color: black;
+}
