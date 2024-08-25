@@ -116,6 +116,53 @@ esten por debajo del elemento de referencia */
   font-size: 24px;
 }
 
+/*********** Pseudoclases *********/
+/*
+Las pseudoclases dan estilos dependiendo del contexto, posición o estado del documento 
+https: //developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+*/
+
+.form-pseudoclases :required {
+  border-color: yellow;
+}
+
+.form-pseudoclases :valid {
+  border-color: green
+}
+
+.form-pseudoclases :invalid {
+  border-color: red
+}
+
+.form-pseudoclases *:focus {
+  background-color: skyblue;
+}
+
+.form-pseudoclases :disabled {
+  background-color: pink;
+}
+
+/* OJO: la pseudoclase "hover" aplica para cualquier elemento, no solo a enlaces. Ademas este debe ir siempre al final de otros pseudoclases ya que podrian anular su interactividad por el efecto cascada de CSS*/
+/* hover da un efecto al colocar el cursor sobre el elemento indicado*/
+/* el orden de las pseudoclases para enlaces es : link, active, visited y luego hover */
+
+.menu-pseudoclases a:visited {
+  color: crimson
+}
+
+.menu-pseudoclases a:hover {
+  color: orange;
+}
+
+.p-pseudoclases:hover {
+  font-size: 20px;
+}
+
+#temario:target {
+  /* se activa si le da click (se targetea en el link de navegación) */
+  background-color: lightseagreen;
+}
+
 
 
 /*
