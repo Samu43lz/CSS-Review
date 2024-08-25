@@ -66,8 +66,50 @@ esten por debajo del elemento de referencia */
   background-color: thistle;
 }
 
+/*********************************/
 
-/* 
+/* Selectores de atributos */
+.s-atributo a[href] {
+  color: chocolate;
+}
+
+/* tambien podemos ser más especificos*/
+.s-atributo a[target="_blank"] {
+  font-weight: bold;
+}
+
+/* el comodin del " * " aplica el estilo si el elemento tiene la palabra en cuestión */
+.s-atributo a[href*="Samu43lz"] {
+  font-size: 20px;
+}
+
+/* el comodin " ^ " le va aplicar los estilos a los elementos que comienzen con el texto que pongamos */
+.s-atributo a[href^="http:"] {
+  text-decoration: none;
+  /* le quitara la decoración, como el subrayado */
+}
+
+/* el comodin " $ " le va aplicar los estilos a los elementos que terminen con el texto indicado */
+.s-atributo a[href$=".com"] {
+  background-color: black;
+}
+
+/* el comodin " ~ " aplica el estilo si contiene el texto en cuestión en una lista separada por espacios 
+  como en un conjunto de clases*/
+.s-atributo a[class~="cv"] {
+  background-color: midnightblue;
+}
+
+/* el comodin " | " aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que despues del texto en cuestión venga un guión medio " - " (Ejemplo : 
+  atributo-ejemplo) */
+.s-atributo a[class|="menu"] {
+  font-style: italic;
+}
+
+
+
+
+/*
 🔵 Enlaces de la documentación de CSS: 
 - https: //es.wikipedia.org/wiki/Hoja_de...
 - https: //www.w3.org/html/logo/
