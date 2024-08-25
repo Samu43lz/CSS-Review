@@ -42,6 +42,31 @@ hacer diseños */
   background-color: black;
 }
 
+/*Selectores de hijos*/
+
+.h-directos>li {
+  background-color: thistle;
+}
+
+.h-descendientes b {
+  background-color: thistle;
+}
+
+/*Selector de hermanos general*/
+/* estos selectores van a aplicar a los elementos que son hermanos (osea que estan en el mismo nivel) y que
+esten por debajo del elemento de referencia */
+
+.hermanos-general~li {
+  background-color: thistle;
+}
+
+/* Selector de hermanos adyacentes */
+/* le aplica el diseño al siguiente elemento del elemento de referencia*/
+.hermanos-adyacentes+li {
+  background-color: thistle;
+}
+
+
 /* 
 🔵 Enlaces de la documentación de CSS: 
 - https: //es.wikipedia.org/wiki/Hoja_de...
