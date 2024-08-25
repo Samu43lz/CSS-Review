@@ -106,6 +106,15 @@ esten por debajo del elemento de referencia */
   font-style: italic;
 }
 
+/* Selector Universal */
+* {
+  font-family: sans-serif;
+}
+
+/* tambien podemos usarlo de esta manera (a todos los elementos de cierta clase por ejemplo) */
+.s-universal * {
+  font-size: 24px;
+}
 
 
 
