@@ -147,7 +147,7 @@ https: //developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 /* el orden de las pseudoclases para enlaces es : link, active, visited y luego hover */
 
 .menu-pseudoclases a:visited {
-  color: crimson
+  color: brown;
 }
 
 .menu-pseudoclases a:hover {
@@ -162,6 +162,66 @@ https: //developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
   /* se activa si le da click (se targetea en el link de navegación) */
   background-color: lightseagreen;
 }
+
+/*** Por posición y tipo ***/
+
+.lista-pseudoclases li:first-child {
+  /* afecta al primer elemento */
+  color: crimson;
+  font-weight: bold;
+}
+
+.lista-pseudoclases :last-child {
+  /* afecta al ultimo elemento */
+  color: blueviolet;
+}
+
+.lista-pseudoclases li:nth-child(2) {
+  /* con nth-child podemos escoger cualquiera mediante el selector*/
+  color: navy;
+}
+
+.lista-pseudoclases li:nth-child(5n) {
+  /* podemos hacer un intercalado de colores donde "n" es cada cuantos elementos se aplicara el diseño*/
+  color: darkgreen;
+  font-size: 20px;
+}
+
+.lista-pseudoclases li:nth-child(even) {
+  /* podemos colocar el disño para elementos pares osea cada 2  lo mismo que decir (2n)*/
+  background-color: rgba(0, 0, 0, 0.548);
+}
+
+.lista-pseudoclases li:nth-child(odd) {
+  /* podemos colocar el disño para elementos impares*/
+  background-color: rgba(128, 128, 128, 0.562)
+}
+
+/**** por etiquetas ****/
+/* aplica a todas las etiquetas */
+/* se pueden aplicar todas las expresiones anteriores */
+.articulo-pseudoclases p:first-of-type {
+  background-color: pink;
+}
+
+.articulo-pseudoclases p:last-of-type {
+  background-color: purple;
+}
+
+.articulo-pseudoclases p:nth-of-type(2) {
+  background-color: violet;
+}
+
+/* tambien podemos colocar diseño a todos los elementos pero exceptuando elementos con
+cierta etiqueta*/
+.articulo-pseudoclases *:not(p) {
+  background-color: beige;
+}
+
+/*** Pseudoelementos ***/
+/* Dan estilos a partes especificas de un elemento, se usa el :: para diferenciarlos
+de las pseudoclases */
+
 
 
 
