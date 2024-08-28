@@ -222,8 +222,50 @@ cierta etiqueta*/
 /* Dan estilos a partes especificas de un elemento, se usa el :: para diferenciarlos
 de las pseudoclases */
 
+/* los pseudoelementos before y after nos van a permitir agregar contenido antes o despues.
+Es necesario tener siempre el atributo "content"*/
+.mu-aries::before {
+  content: "🐏";
+}
 
+.mu-aries::after {
+  content: "♈";
+}
 
+.mu-precio::before {
+  content: "💸$";
+  font-weight: bold;
+}
+
+.mu-precio::after {
+  content: "USD";
+  font-weight: bold;
+}
+
+/*** todas sirven para etiquetas semanticas, article, section, footer , etc. ***/
+/* para la primera letra del parrafo */
+.p-pseudoelementos::first-letter {
+  font-size: 32px;
+  font-weight: bold
+}
+
+/* para la primera linea del parrafo */
+.p-pseudoelementos::first-line {
+  color: coral;
+}
+
+/* para cambiar el efecto de selección de un texto ej:(cuando quieres copiar un nombre y tienes que seleccionarlo) */
+.p-pseudoelementos::selection {
+  color: greenyellow;
+  background-color: black;
+}
+
+/*** tambien podemos utilizar todos estos pseudoelementos de manera universal ***/
+
+*::selection {
+  color: red;
+  background-color: black;
+}
 
 /*
 🔵 Enlaces de la documentación de CSS: 
