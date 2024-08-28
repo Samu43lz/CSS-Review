@@ -267,6 +267,23 @@ Es necesario tener siempre el atributo "content"*/
   background-color: black;
 }
 
+/*********** Agrupar Selectores *************/
+
+/* para cuando querramos aplicar cierta regla a un grupo de elementos, con el uso de la "," */
+.form-agrupar-selectores input[name=nombre],
+input[name=correo],
+textarea {
+  border-color: blue;
+  background-color: black;
+  font-size: 23px;
+  color: wheat;
+  display: block;
+  width: 300px;
+  border-width: 2px;
+}
+
+
+
 /*
 🔵 Enlaces de la documentación de CSS: 
 - https: //es.wikipedia.org/wiki/Hoja_de...
