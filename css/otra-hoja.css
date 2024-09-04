@@ -8,3 +8,7 @@ h1 {
 #temario {
   padding: 15px;
 }
+
+.importante {
+  color: red;
+}

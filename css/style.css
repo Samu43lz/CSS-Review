@@ -275,15 +275,47 @@ input[name=correo],
 textarea {
   border-color: blue;
   background-color: black;
-  font-size: 23px;
+  font-size: 20px;
   color: wheat;
   display: block;
   width: 300px;
   border-width: 2px;
+  padding: 7px;
 }
 
+/*** El Algoritmo de CSS ***/
+/* El algoritmo de CSS: Es la forma en el que el navegador aplica los estilos al documento HTML. Es vital entender este concepto para que entiendas como se aplican y en algunas ocaciones se sobreescriben las reglas CSS.
+1.) La Cáscada
+2.) La Especificidad
+3.) La Herencia
+*/
 
+/** La Cáscada es el mecanismo en el que el navegador aplica los estilos. Y toma en cuenta lo siguiente en este orden :
 
+1.) El Origen del Código
+      - El User Agent (Los estilos por defecto del navegador)
+      - Personalizaciones del usuario. (Aumentar el zoom, cambiar de un tema claro a obscuro, etc)
+      - Los estilos del autor. (Los diseños del escritor del código(Tú))
+2.) La Especificidad del Selector //** Aqui ya no importa la cascada, si un selector tiene mayor peso que otro, este sera el que aplique el estilo.
+3.) Orden de Aparición
+
+/** Cada vez que tengas algun problema con que no se te cargue algun diseño revisa en las opciones de desarrollador (inspeccionar elemento y luego seleccionando el elemento que quieres) para ver como es que los estilos se han ido aplicando para ese elemento que quieres y modificarlo. 
+
+**Ademas en la zona de "Calculado" en Microsoft Edge podemos ver que diseño tiene mayor peso y por lo tanto es el que estara siendo aplicado para el elemento en cuestión
+*/
+
+/** La Especificidad es el peso que tiene un selector cuando hay un conflicto de estilos. Se calcula de la siguiente forma: 
+
+/// cuando hablamos de "Por cada" no me refiero al valor , si no, a la agrupación ej : h1,h2,3 {
+                                                                                                color: black 
+                                                                                                }
+**Etiquetas y Pseudoelementos ------------ 0,0,0,1 por cada pseudoelemento que tenga tu selector se aumenta en 1 la unidad
+**Clases, Atributos y Pseudoclases ------- 0,0,1,0 por cada C,A, ó Pseudoclase que tenga tu selector se aumenta en 1 el 2 digito de derecha a izquierda
+**Identificadores ------------------------ 0,1,0,0 Por cada identificador se aumenta en 1 en el tercer digito
+**Estilos en linea ----------------------- 1,0,0,0 Por cada Estilo en Linea se aumenta en 1 en el cuarto digito
+**Important ------------------------------ Rompe la Especificidad
+
+**Por eso lo más importante es utilizar Clases, Dandole un nombre de clase al elemento padre y tomando refenrencia e ir a aplicando a las etiquetas o a los elemento internos que quieras tratando de que el nivel de selectores descendientes no sobrepasen de los 2
 /*
 🔵 Enlaces de la documentación de CSS: 
 - https: //es.wikipedia.org/wiki/Hoja_de...
