@@ -190,15 +190,32 @@
     <p class="importante"> IMPORTANTE : Revisar el código (mis comentarios en cada parte) para tener más
       conocimiento
       valioso acerca de este tema</p>
-    <ul>
-      <li>La Cáscada</li>
-      <P>1️⃣🟥 Autor: Mayor prioridad. Es el CSS que creamos los desarrolladores en una web. <br>
-        2️⃣🟧 Usuario: Es el CSS que puede crear el usuario del navegador. Por ejemplo, usando UserStyles. <br>
-        3️⃣🟨 Navegador(User Agent): Es el CSS que tiene y aplica el navegador por defecto.</P>
-      <li>La Especificidad (Cuanto más específicos sean los selectores CSS, mayor prioridad)</li>
+    <ol>
+      <li><u>La Cáscada</u></li>
+      <p>Orden de Aparición :<br> Si dos reglas tienen la misma especificidad, el navegador <strong>aplicará la que
+          aparece más
+          tarde</strong> en el código CSS.</p>
+      <P>1️⃣🟥 <b>Autor</b>: Mayor prioridad. Es el CSS que creamos los desarrolladores en una web. <br>
+        2️⃣🟧 <b>Usuario</b>: Es el CSS que puede crear el usuario del navegador. Por ejemplo, usando UserStyles. <br>
+        3️⃣🟨 <b>Navegador</b>(User Agent): Es el CSS que tiene y aplica el navegador por defecto.</P>
+      <li><u>La Especificidad</u> (Cuanto más específicos sean los selectores CSS, mayor prioridad)</li>
       <img style="width: 500px;" src="assets/Especificidad.png" alt="ejemplo">
-      <li>La Herencia</li>
-    </ul>
+
+
+      <li><u>La Herencia</u></li>
+      <p>Es la capacidad de un selector de obtener(heredar) los valores de sus ancestros más cercanos, para aplicarla se
+        utiliza el valor <strong>inherit</strong> (Esto es automatico, utilizamos inherit para propiedades que no se
+        heredan de manera automatica), si queremos evitarla podemos asignar un nuevo valor o inicializar la
+        propiedad en cuestión con
+        el valor <strong>initial</strong>. (que hara actualizar los valores por defecto del navegador para ese elemento)
+      </p>
+    </ol>
+    <div>
+      <h5>Ejemplo de Especificidad y Herencia (Revisar el código CSS ó los estilos en el navegador)</h5>
+      <blockquote id="cita-marco" class="cita-marco">
+        Sé tolerante con lo demás y estricto contigo - <cite>Marco Aurelio</cite>
+      </blockquote>
+    </div>
     <a href="index.html#temario">⬆️</a>
   </article>
   <hr>

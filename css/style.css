@@ -316,6 +316,60 @@ textarea {
 **Important ------------------------------ Rompe la Especificidad
 
 **Por eso lo más importante es utilizar Clases, Dandole un nombre de clase al elemento padre y tomando refenrencia e ir a aplicando a las etiquetas o a los elemento internos que quieras tratando de que el nivel de selectores descendientes no sobrepasen de los 2
+
+*/
+
+/***  EJEMPLO DE ESPECIFICIDAD , CASCADA Y HERENCIA ***/
+
+/* ahora este lidera a todos los selectores sin importar el orden de Cascada, debido a su alta especificidad */
+blockquote#cita-marco.cita-marco {
+  background-color: lightskyblue;
+  font-size: 27px;
+  border-style: dotted;
+  border-color: navy;
+}
+
+blockquote {
+  background-color: burlywood;
+}
+
+/* .cita-marco {
+  background-color: chartreuse !important;
+}    Este romperia la especificidad y seria elegida, Ademas cuando hay 2 importants lo que definiria cual de los 2 se efectura seria la Cascada CSS osea el ultimo en ser agregado*/
+
+
+/*Esta es mala practica ya que es muy especifico (al igual como los demas que ire colocando), aunque puede usarse.  Ahora como vimos en css el ultimo estilo en ser agregado es el estilo que se efectúa pero en este caso tambien CSS mira la ESPECIFICIDAD, por lo tanto al ser este selector más especifico osea con un mayor número de especificidad, este sera el estilo a efectuarse.*/
+blockquote.cita-marco {
+  background-color: tomato;
+}
+
+.cita-marco {
+  background-color: aquamarine;
+}
+
+/* pero luego debio a la especificidad, este selector estaria efectuando el estilo , ya que su peso (su especificdad) es mayor por ser un ID*/
+#cita-marco {
+  background-color: lightgreen;
+}
+
+/* Ahora este selector es el que lidera debido a la cascada CSS (ser el ultimo en ser colocado) y ademas por su especificidad en donde además de tener la etiqueta tambien le suma la especificidad del ID */
+blockquote#cita-marco {
+  background-color: darkslateblue;
+}
+
+.cita-marco cite {
+  background-color: pink;
+  background-color: inherit;
+  /* el fontsize del elemento padre se hereda de manera automatica, esto no pasa con los colores y algunas propiedades más, y para "desheredar" alguna propiedad de elemento le asignas un nuevo valor por tu cuenta o reinicias su valor al que le puso el navegador por defecto con "initial"*/
+  /* los elemento que no se heredan estaran inhabilitados en la herramienta de desarrollador del navegador en la sección de estilos */
+  font-size: initial;
+  border-style: inherit;
+  border-color: inherit;
+
+}
+
+/***  ************************  ***/
+
 /*
 🔵 Enlaces de la documentación de CSS: 
 - https: //es.wikipedia.org/wiki/Hoja_de...
