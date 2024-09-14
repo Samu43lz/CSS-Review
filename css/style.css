@@ -144,7 +144,7 @@ https: //developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 
 /* OJO: la pseudoclase "hover" aplica para cualquier elemento, no solo a enlaces. Ademas este debe ir siempre al final de otros pseudoclases ya que podrian anular su interactividad por el efecto cascada de CSS*/
 /* hover da un efecto al colocar el cursor sobre el elemento indicado*/
-/* el orden de las pseudoclases para enlaces es : link, active, visited y luego hover */
+/** el orden de las pseudoclases para enlaces es : link, active, visited y luego hover **/
 
 .menu-pseudoclases a:visited {
   color: brown;
@@ -270,6 +270,7 @@ Es necesario tener siempre el atributo "content"*/
 /*********** Agrupar Selectores *************/
 
 /* para cuando querramos aplicar cierta regla a un grupo de elementos, con el uso de la "," */
+/** esto es muy efectivo en forms **/
 .form-agrupar-selectores input[name=nombre],
 input[name=correo],
 textarea {
@@ -381,3 +382,15 @@ blockquote#cita-marco {
 🔵 Can I Use - https: //caniuse.com/
 🔵 Code Guide - https: //codeguide.co/ 
 */
+
+button a:link {
+  color: blue;
+}
+
+button a:visited {
+  color: red;
+}
+
+button {
+  background-color: greenyellow;
+}

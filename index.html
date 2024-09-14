@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Normalize debe ir antes por el efecto de cascada, además esto lo hacemos porque tomamos a normalize como la base de nuestro proyecto.-->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/otra-hoja.css">
   <style>
@@ -26,6 +28,7 @@
       <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
       <li><a href="index.html#agrupar-selectores">Agrupar Selectores</a></li>
       <li><a href="index.html#algoritmo-css">El Algoritmo de CSS</a></li>
+      <li><a href="index.html#normalize">Normalize</a></li>
       <li><a href="index.html"></a></li>
     </ul>
   </article>
@@ -205,7 +208,8 @@
       <li><u>La Herencia</u></li>
       <p>Es la capacidad de un selector de obtener(heredar) los valores de sus ancestros más cercanos, para aplicarla se
         utiliza el valor <strong>inherit</strong> (Esto es automatico, utilizamos inherit para propiedades que no se
-        heredan de manera automatica), si queremos evitarla podemos asignar un nuevo valor o inicializar la
+        heredan de manera automatica, como los bordes), si queremos evitarla podemos asignar un nuevo valor o
+        inicializar la
         propiedad en cuestión con
         el valor <strong>initial</strong>. (que hara actualizar los valores por defecto del navegador para ese elemento)
       </p>
@@ -216,6 +220,47 @@
         Sé tolerante con lo demás y estricto contigo - <cite>Marco Aurelio</cite>
       </blockquote>
     </div>
+    <a href="index.html#temario">⬆️</a>
+  </article>
+  <hr>
+  <article>
+    <h2 id="normalize">Normalize</h2>
+    <p>Normalize.css es una hoja de estilo que busca <strong>estandarizar el comportamiento de los elementos HTML en
+        diferentes
+        navegadores</strong>, proporcionando una base más consistente y predecible. A diferencia de un "reset" CSS, que
+      elimina
+      todos los
+      estilos por defecto, Normalize.css no elimina los estilos predeterminados, sino que los normaliza y los ajusta
+      para que
+      sean más uniformes entre navegadores.</p>
+    <h3>Diferencias Clave Entre Normalize y CSS Reset</h3>
+    <ul>
+      <h3>CSS Reset</h3>
+      <li><u>Elimina Estilos Predeterminados</u> : Un CSS reset elimina la mayoría de los estilos predeterminados de los
+        navegadores. <strong>Esto
+          te da un lienzo en blanco , pero también puede requerir que vuelvas a definir muchos estilos desde
+          cero.</strong></li>
+      <li>Ejemplo: Puedes terminar con elementos que no tienen márgenes, paddings, ni fuentes predeterminadas, y deberás
+        especificar todos estos estilos tú mismo.</li>
+      <h3>Normalize</h3>
+      <li> <u>Normaliza Estilos</u>: <strong>Ajusta y estandariza los estilos predeterminados para que sean más
+          consistentes
+          entre
+          navegadores, sin eliminarlos por completo.</strong>
+        Esto incluye corregir errores y mejorar la accesibilidad.</li>
+      <li>Ejemplo: Asegura que los márgenes y paddings predeterminados sean más uniformes entre navegadores, pero
+        mantiene ciertos
+        estilos útiles como el tamaño de fuente de los encabezados.</li>
+    </ul>
+    <h5><span style="color: green;">CONCLUSIÓN</span>: Normalize.css es beneficioso para asegurar que tu diseño web
+      se vea y funcione de manera
+      consistente en todos
+      los
+      dispositivos, incluidos móviles. Actúa como una base sólida, permitiéndote diseñar y desarrollar con confianza,
+      sabiendo
+      que los estilos básicos serán más uniformes entre diferentes navegadores y plataformas.</h5>
+    <button><a href="https://necolas.github.io/normalize.css/" target="_blank">Página Normalize</a></button>
+    <br>
     <a href="index.html#temario">⬆️</a>
   </article>
   <hr>
